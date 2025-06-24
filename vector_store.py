@@ -1,4 +1,11 @@
 import streamlit as st
+
+# Fix SQLite3 version before importing ChromaDB
+try:
+    import sqlite_fix
+except ImportError:
+    pass
+
 import chromadb
 from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
